@@ -170,7 +170,7 @@ const Projects = () => {
                     {filteredProjects.map((project) => (
                         <div key={project.id} className="project-card fade-in">
                             <div className="project-image-wrapper">
-                                <img src={project.image} alt={project.name} className="project-image" loading="lazy" />
+                                <img src={`${import.meta.env.BASE_URL}${project.image.slice(1)}`} alt={project.name} className="project-image" loading="lazy" />
                                 <div className="project-overlay">
                                     <button className="btn btn-primary" onClick={() => openProject(project)}>
                                         View Project
@@ -219,7 +219,7 @@ const Projects = () => {
                             </div>
 
                             <div className="modal-hero-image">
-                                <img src={selectedProject.fullImage} alt={selectedProject.name} />
+                                <img src={`${import.meta.env.BASE_URL}${selectedProject.fullImage.slice(1)}`} alt={selectedProject.name} />
                             </div>
 
                             <div className="modal-body-grid">
