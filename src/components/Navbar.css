@@ -134,6 +134,8 @@
     .navbar-links {
         position: fixed;
         top: var(--nav-height);
+        left: auto;
+        transform: none;
         right: -100%;
         width: 100%;
         height: calc(100dvh - var(--nav-height));
