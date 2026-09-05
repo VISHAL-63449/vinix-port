@@ -44,7 +44,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''} ${isMobileMenuOpen ? 'menu-open' : ''}`}>
       <div className="container navbar-container">
         <a href="#home" className="navbar-logo" style={{ display: 'flex', alignItems: 'center' }}>
           <img src={vinixTitleImg} alt="VINIX" style={{ height: '36px', width: 'auto', objectFit: 'contain' }} />

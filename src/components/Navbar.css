@@ -11,10 +11,9 @@
     background-color: transparent;
 }
 
-.navbar.scrolled {
-    background-color: var(--bg-glass);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+.navbar.scrolled,
+.navbar.menu-open {
+    background-color: var(--bg-primary, #ffffff);
     box-shadow: var(--shadow-sm);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -98,14 +97,17 @@
     cursor: pointer;
     z-index: 1002;
     position: relative;
+    padding: 0;
 }
 
 .hamburger span {
+    display: block;
     width: 100%;
     height: 2px;
     background-color: var(--text-primary);
     border-radius: 2px;
     transition: all 0.3s ease;
+    transform-origin: center;
 }
 
 .hamburger.active span:nth-child(1) {
@@ -131,20 +133,21 @@
 
     .navbar-links {
         position: fixed;
-        top: 0;
+        top: var(--nav-height);
         right: -100%;
         width: 100%;
-        height: 100dvh;
+        height: calc(100dvh - var(--nav-height));
         background-color: var(--bg-primary, #ffffff);
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         transition: right 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
-        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+        box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.1);
         gap: 2rem;
-        padding-top: 100px;
+        padding-top: 40px;
         overflow-y: auto;
         padding-bottom: 40px;
+        z-index: 999;
     }
 
     .navbar-links.active {
@@ -152,7 +155,9 @@
     }
 
     .nav-link {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
+        width: 180px;
+        justify-content: flex-start;
     }
 
     .mobile-only {
