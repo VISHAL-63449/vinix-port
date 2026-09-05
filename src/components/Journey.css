@@ -1,0 +1,109 @@
+.journey-section {
+    padding: 60px 0;
+}
+
+.journey-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.journey-step-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.journey-node {
+    background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+    border: 1px solid var(--border-light);
+    padding: 16px 32px;
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.journey-node:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-blue);
+    background: var(--bg-primary);
+}
+
+.journey-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.journey-arrow {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    margin: 8px 0;
+    animation: pulse-arrow 2s infinite ease-in-out;
+}
+
+@keyframes pulse-arrow {
+    0% {
+        transform: translateY(0);
+        color: var(--text-light);
+    }
+
+    50% {
+        transform: translateY(5px);
+        color: var(--accent-blue);
+    }
+
+    100% {
+        transform: translateY(0);
+        color: var(--text-light);
+    }
+}
+
+@media (min-width: 900px) {
+    .journey-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .journey-step-wrapper {
+        flex-direction: row;
+        width: auto;
+    }
+
+    .journey-arrow {
+        height: auto;
+        width: 40px;
+        margin: 0 10px;
+        transform: rotate(-90deg);
+    }
+
+    @keyframes pulse-arrow {
+        0% {
+            transform: rotate(-90deg) translateX(0);
+            color: var(--text-light);
+        }
+
+        50% {
+            transform: rotate(-90deg) translateX(-5px);
+            color: var(--accent-blue);
+        }
+
+        100% {
+            transform: rotate(-90deg) translateX(0);
+            color: var(--text-light);
+        }
+    }
+}
