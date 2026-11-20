@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { MapPin, Mail } from 'lucide-react';
 import './Contact.css';
 
 const Contact = () => {
@@ -102,21 +102,11 @@ ${formData.description}`;
 
                             <div className="info-card fade-in-up" style={{ animationDelay: '0.2s' }}>
                                 <div className="info-icon">
-                                    <Phone size={24} className="icon-gradient" />
-                                </div>
-                                <div className="info-content">
-                                    <h4 className="info-title">Call Us</h4>
-                                    <a href="tel:+916385475759" className="info-link">+91 63854 75759</a>
-                                </div>
-                            </div>
-
-                            <div className="info-card fade-in-up" style={{ animationDelay: '0.3s' }}>
-                                <div className="info-icon">
                                     <MapPin size={24} className="icon-gradient" />
                                 </div>
                                 <div className="info-content">
                                     <h4 className="info-title">Location</h4>
-                                    <span className="info-text">Karaikudi, Tamil Nadu</span>
+                                    <span className="info-text">Chennai, Tamil Nadu</span>
                                 </div>
                             </div>
                         </div>

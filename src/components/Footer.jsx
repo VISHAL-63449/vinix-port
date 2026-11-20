@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 import vinixTitleImg from '../assets/vinix-title.png';
 import './Footer.css';
 
@@ -60,11 +60,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <MapPin size={16} className="contact-list-icon" />
-                                <span>Karaikudi, Tamil Nadu</span>
-                            </li>
-                            <li>
-                                <Phone size={16} className="contact-list-icon" />
-                                <span>+91 63854 75759</span>
+                                <span>Chennai, Tamil Nadu</span>
                             </li>
                         </ul>
 

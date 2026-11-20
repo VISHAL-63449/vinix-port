@@ -1,4 +1,4 @@
-import { Target, Lightbulb, Phone, Mail, User } from 'lucide-react';
+import { Target, Lightbulb, Mail, User } from 'lucide-react';
 import aboutImg from '../assets/about_img.png';
 import './About.css';
 
@@ -70,10 +70,6 @@ const About = () => {
                             A passionate technology leader dedicated to shaping the future of digital solutions. With a deep commitment to excellence, Vishal leads the VINIX team to deliver world-class applications, focusing on scalable architecture, seamless user experiences, and transformative business growth.
                         </p>
                         <div className="founder-contact">
-                            <a href="tel:+916385475759" className="contact-link">
-                                <Phone size={16} />
-                                <span>+91 6385475759</span>
-                            </a>
                             <a href="mailto:vinixtech2026@gmail.com" className="contact-link">
                                 <Mail size={16} />
                                 <span>vinixtech2026@gmail.com</span>
